@@ -1,12 +1,27 @@
 # MNIST_Diffusion_Model
-This project implements a denoising diffusion probabilistic model (DDPM) from scratch to generate handwritten digits from the MNIST dataset. The model learns to reverse a gradual noising process, starting from random noise and producing realistic 28×28 grayscale digits through iterative denoising steps.
 
-### Features
-- **Full DDPM training pipeline** with custom U-Net architecture
-- **Forward & reverse diffusion processes** with linear noise scheduling
-- **Conditional generation** (optional class-guided sampling)
-- **Lightweight implementation** using PyTorch
-- **Visualization tools** for sampling progress and loss curves
+В этом проекте реализована диффузионная вероятностная модель с подавлением шума (DDPM) **с нуля** для генерации рукописных цифр из датасета MNIST.  
+Модель обучается обращать постепенный процесс зашумления, начиная со случайного шума и шаг за шагом восстанавливая реалистичные серые изображения цифр размером 28×28 с помощью итеративного денойзинга.
 
-### Results
-The model generates diverse MNIST-style digits after training, showcasing the capability of diffusion models for image synthesis on small-scale datasets.
+### Возможности
+- **Полный пайплайн обучения DDPM** с кастомной архитектурой U-Net  
+- **Прямой и обратный процессы диффузии** с линейным расписанием шума  
+- **Условная генерация** (опционально, с учётом класса цифры)  
+- **Лёгкая и понятная реализация** на PyTorch  
+- **Инструменты визуализации** для процесса сэмплирования и кривых функции потерь  
+
+### Результаты
+После обучения модель генерирует разнообразные изображения цифр в стиле MNIST, демонстрируя эффективность диффузионных моделей для синтеза изображений на небольших датасетах.
+
+## Результаты обучения по эпохам
+
+В таблице ниже показаны визуальные результаты работы нейросети на разных этапах обучения.
+
+| Эпоха | Результат |
+|------:|:---------:|
+| 5     | ![](samples/epoch_0005.png) |
+| 10    | ![](samples/epoch_0010.png) |
+| 15    | ![](samples/epoch_0015.png) |
+| 20    | ![](samples/epoch_0020.png) |
+| 25    | ![](samples/epoch_0025.png) |
+| 30    | ![](samples/epoch_0030.png) |
